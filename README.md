@@ -39,6 +39,6 @@ Task build-vm cargo build -p vm
 Task vm-exec cargo run --bin vm "scripts/vm_example.ts"
     Finished dev [unoptimized + debuginfo] target(s) in 0.22s
      Running `target/debug/vm scripts/vm_example.ts`
-[out]: "content" "Hello, alice! You've been greeted from Rust!"
-[out]: "content" "Hello, alice! You've been greeted by bob!"
+[out]: "Hello, alice! You've been greeted from Rust!"
+[out]: "Hello, alice! You've been greeted by bob!"
 ```

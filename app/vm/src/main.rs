@@ -76,16 +76,7 @@ impl deno_core::ModuleLoader for TsModuleLoader {
 async fn run_js(file_path: &str) -> Result<(), AnyError> {
     let main_module = deno_core::resolve_path(file_path)?;
     let runjs_extension = Extension::builder("runjs")
-        .ops(vec![
-            hello_world::decl(),
-            second_hello_world::decl(),
-            /*
-            op_read_file::decl(),
-            op_write_file::decl(),
-            op_remove_file::decl(),
-            op_fetch::decl(),
-            */
-        ])
+        .ops(vec![hello_world::decl(), second_hello_world::decl()])
         .build();
     let mut js_runtime = deno_core::JsRuntime::new(deno_core::RuntimeOptions {
         module_loader: Some(Rc::new(TsModuleLoader)),
