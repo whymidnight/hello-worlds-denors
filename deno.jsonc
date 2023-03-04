@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "app-codegen": "cargo build -p app_rs --features codegen",
+    "build-vm": "cargo build -p vm",
+    "build": "deno task app-codegen && deno task build-vm",
+    "vm-exec": "cargo run --bin vm",
+    "e2e": "deno task build && deno task vm-exec"
+  }
+}

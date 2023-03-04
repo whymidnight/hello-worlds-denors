@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "app/rs",
+  "app/vm",
+]
+
+[profile.release]
+lto = true

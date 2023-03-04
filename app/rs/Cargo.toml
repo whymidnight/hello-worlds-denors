@@ -1,0 +1,29 @@
+[package]
+name = "app_rs"
+version = "0.0.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.57"
+publish = false
+
+[build-dependencies]
+deno_specta = { git = "https://github.com/whymidnight/deno-specta.git", features = ["abi", "runtime"] }
+specta = { git = "https://github.com/whymidnight/specta.git" }
+deno_core = { version = "0.173.0" }
+tokio = { version = "1.25.0", features = ["full"] }
+
+[dependencies]
+serde_json = "1.0"
+specta = { git = "https://github.com/whymidnight/specta.git" }
+serde = { version = "1.0", features = ["derive"] }
+deno_core = { version = "0.171.0" }
+deno_specta = { git = "https://github.com/whymidnight/deno-specta.git", features = ["abi", "runtime"] }
+tokio = { version = "1.25.0", features = ["full"] }
+
+[features]
+default = []
+codegen = []
+deno_op = []
